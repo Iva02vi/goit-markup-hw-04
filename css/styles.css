@@ -1,0 +1,260 @@
+:root {
+  --iris: #4d5ae5;
+  --ocean: #404bbf;
+  --navy-blue: #2e2f42;
+  --grewn: #31d0aa;
+  --slate: #434455;
+  --light-slate: #8e8f99;
+  --cornflower: #e7e9fc;
+  --cloud: #f4f4fd;
+  --navy-blue-modal: #2e2f42;
+  --grey: #2e2f42;
+  --white: #ffffff;
+  --dairy: #fcfcfc;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--slate);
+  background: var(--white);
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+}
+.section {
+  padding: 120px 0;
+}
+
+.container {
+  max-width: 1158px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section-title {
+  color: var(--navy-blue);
+  text-align: center;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  margin-bottom: 72px;
+}
+
+.card-list {
+  display: flex;
+  gap: 24px;
+}
+
+.card-title {
+  color: var(--navy-blue);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+}
+
+/* Header */
+.header-container {
+  border-bottom: 1px solid var(--cornflower);
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: "Raleway", sans-serif;
+  color: var(--iris);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  display: flex;
+  flex-shrink: 0;
+  margin-right: 76px;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo-studio {
+  color: var(--navy-blue);
+}
+
+.menu-list,
+.address-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.menu-list-item {
+  display: block;
+  color: var(--navy-blue);
+  font-weight: 500;
+  padding: 24px 0;
+}
+
+.menu-list-item:hover,
+.menu-list-item:focus,
+.menu-list-item:active {
+  color: var(--ocean);
+}
+
+.address {
+  font-style: normal;
+}
+
+.address-list-item {
+  color: var(--slate);
+  font-weight: 400;
+}
+
+.address-list-item:hover,
+.address-list-item:focus,
+.address-list-item:active {
+  color: var(--ocean);
+}
+
+/* Hero section */
+.hero-container {
+  text-align: center;
+  background: var(--navy-blue);
+  padding: 188px 0;
+}
+
+.hero-title {
+  color: var(--white);
+  text-align: center;
+  font-size: 56px;
+  line-height: 1.07;
+  letter-spacing: 0.02em;
+  max-width: 496px;
+  margin: auto;
+}
+
+.hero-cont-button {
+  display: block;
+  background: var(--iris);
+  color: var(--white);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+  padding: 16px 32px;
+  margin: 48px auto 0;
+  border: none;
+  border-radius: 4px;
+  min-width: 169px;
+}
+
+.hero-cont-button:hover,
+.hero-cont-button:focus,
+.hero-cont-button:active {
+  background: var(--ocean);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* Qualities */
+.qual-card {
+  width: calc((100% - 3 * 24px) / 4);
+}
+
+/* Team */
+.team-container {
+  background: var(--cloud);
+}
+
+.team-card {
+  text-align: center;
+  background: var(--white);
+  border-radius: 0px 0px 4px 4px;
+  width: calc((100% - 3 * 24px) / 4);
+}
+
+.team-card-info {
+  padding: 32px 0;
+}
+
+/* Portfolio */
+.portf-card-list {
+  display: flex;
+  column-gap: 24px;
+  row-gap: 48px;
+  flex-wrap: wrap;
+}
+
+.portf-card {
+  background: var(--white);
+  width: calc((100% - 2 * 24px) / 3);
+}
+
+.portf-card-info {
+  border: 1px solid var(--cornflower);
+  border-top: none;
+  padding: 32px 16px;
+}
+
+/* Footer */
+.footer {
+  background: var(--navy-blue);
+  color: var(--cloud);
+  padding: 100px 0;
+}
+
+.footer-logo {
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+.footer-logo-studio {
+  color: var(--cloud);
+}
+
+.footer-text {
+  max-width: 264px;
+}
