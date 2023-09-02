@@ -8,7 +8,7 @@
   --cornflower: #e7e9fc;
   --cloud: #f4f4fd;
   --navy-blue-modal: #2e2f42;
-  --grey: #2e2f42;
+  --grey: rgba(46, 47, 66, 0.7);
   --white: #ffffff;
   --dairy: #fcfcfc;
 }
@@ -24,6 +24,9 @@ body {
 h1,
 h2,
 h3,
+h4,
+h5,
+h6,
 p {
   margin: 0;
 }
@@ -105,7 +108,7 @@ button {
   margin-right: 76px;
 }
 
-.nav-menu {
+.header-nav-menu {
   display: flex;
   align-items: center;
 }
@@ -114,45 +117,66 @@ button {
   color: var(--navy-blue);
 }
 
-.menu-list,
-.address-list {
+.header-menu-list,
+.header-address-list {
   display: flex;
   align-items: center;
   gap: 40px;
 }
 
-.menu-list-item {
+.header-menu-list-item {
   display: block;
   color: var(--navy-blue);
   font-weight: 500;
   padding: 24px 0;
+  position: relative;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.menu-list-item:hover,
-.menu-list-item:focus,
-.menu-list-item:active {
+.header-menu-list-item:hover,
+.header-menu-list-item:focus,
+.header-menu-list-item:active {
   color: var(--ocean);
 }
 
-.address {
+.active-page::after,
+.header-menu-list-item:hover::after,
+.header-menu-list-item:focus::after,
+.header-menu-list-item:active::after {
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--ocean);
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: -1px;
+}
+
+.header-address {
   font-style: normal;
 }
 
-.address-list-item {
+.header-address-list-item {
   color: var(--slate);
   font-weight: 400;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.address-list-item:hover,
-.address-list-item:focus,
-.address-list-item:active {
+.header-address-list-item:hover,
+.header-address-list-item:focus,
+.header-address-list-item:active {
   color: var(--ocean);
 }
 
 /* Hero section */
 .hero-container {
   text-align: center;
-  background: var(--navy-blue);
+  background-color: var(--navy-blue);
+  background-image: linear-gradient(to bottom, var(--grey), var(--grey)),
+    url(../images/people_office.jpg);
+  background-size: cover;
   padding: 188px 0;
 }
 
@@ -178,6 +202,7 @@ button {
   border: none;
   border-radius: 4px;
   min-width: 169px;
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-cont-button:hover,
@@ -204,6 +229,14 @@ button {
   width: calc((100% - 3 * 24px) / 4);
 }
 
+.qual-icon-container {
+  padding: 24px 100px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  border: 1px solid var(--light-slate);
+  background: var(--cloud);
+}
+
 /* Team */
 .team-container {
   background: var(--cloud);
@@ -220,6 +253,37 @@ button {
   padding: 32px 0;
 }
 
+.team-icons-list {
+  display: flex;
+  gap: 24px;
+  margin-top: 8px;
+  justify-content: center;
+}
+
+.team-icons-item {
+  width: 40px;
+  height: 40px;
+  background-color: var(--iris);
+  border-radius: 50px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-icons-item:hover {
+  background-color: var(--ocean);
+}
+
+.team-icon-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-icon {
+  fill: var(--cloud);
+}
+
 /* Portfolio */
 .portf-card-list {
   display: flex;
@@ -231,6 +295,28 @@ button {
 .portf-card {
   background: var(--white);
   width: calc((100% - 2 * 24px) / 3);
+}
+
+.portf-card-img-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.portf-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--iris);
+  color: var(--cloud);
+  padding: 40px 32px;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portf-card:hover .portf-overlay {
+  transform: translateY(0);
 }
 
 .portf-card-info {
@@ -246,6 +332,14 @@ button {
   padding: 100px 0;
 }
 
+.footer-section {
+  display: flex;
+}
+
+.footer-info-block {
+  margin-right: 120px;
+}
+
 .footer-logo {
   margin-bottom: 16px;
   display: inline-block;
@@ -257,4 +351,38 @@ button {
 
 .footer-text {
   max-width: 264px;
+}
+
+.footer-social-title {
+  font-weight: 500;
+}
+
+.footer-icons-list {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.footer-icons-item {
+  width: 40px;
+  height: 40px;
+  background-color: var(--iris);
+  border-radius: 50px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-icons-item:hover {
+  background-color: var(--grewn);
+}
+
+.footer-icon-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-icon {
+  fill: var(--cloud);
 }
